@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <title>Three Js Training</title>
+    </head>
+    <body>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "../build/three.module.js",
+                    "three/addons/": "./jsm/"
+                }
+            }
+        </script>
+    
+            <div  class="fullpage" style="width:100vh ; height: 100vh;">
+
+                <div style="width: 20%;height: 100vh; float: left; text-align: center; margin: 1px; padding: 2px; border: 3px solid;">
+                    
+                    <div class="border;" style="height: 3vh;margin-top: 20px;margin-left: 25px; margin-bottom: 20px; width: 100px; text-align: center; padding-right: 20px;border: solid;">Functionality </div>
+
+                    <div style="border: 3px solid; margin:0px 25px 3px 25px; padding: 2px;">
+                        <button id="cube"style="background-color: antiquewhite;" >Cube</button>
+                    </div>
+
+                    <div style="border: 3px solid; margin:0px 25px 3px 25px; padding: 2px;">
+                        <button id="sphere" style="background-color: antiquewhite;">Sphere</button>
+                    </div>
+
+                    <div style="border: 3px solid; margin:0px 25px 3px 25px; padding: 2px;">
+                        <button id="pyramid" style="background-color: antiquewhite;">Pyramid</button>
+                    </div>
+
+                    <div style="border: 3px solid; margin:0px 25px 3px 25px; padding: 2px; ">
+                    <button id="cylinder" style="background-color: antiquewhite;">Cylinder</button>
+                    </div>
+
+                    <div>
+                        <button id="toggle"> Toggle</button>
+                    </div>
+                
+                </div>
+            
+                <div style="width: 70% ;float: left; margin: 1px; padding: 2px;">
+                
+                    <div class="fullpage" id="MyCanvas"></div>
+                   <div class="fullpage" id="pyramid"></div>
+                    <div class="fullpage" id="sphere"></div>
+                    <div class="fullpage" id="cylinder"></div>
+
+                </div>
+            </div>
+            
+            <!-- <div >
+                <script type="module" src="./js/Cube.js"></script>
+            </div> -->
+
+
+            <div>
+                <script type="module" src="./js/try.js"></script>
+            </div>
+        </body>
+        </html>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">One col</div>
+                <div class="col">Two col</div>
+            </div>
+        </div>

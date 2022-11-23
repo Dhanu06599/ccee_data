@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container cont">
+      <div class="row">
+        <div class="col-xxl-3 col1">
+          
+            <h2>Functionality</h2>
+            <br>
+            <br>
+            <button class="btn btn-success" onclick="fun()">Cube</button><br/><br/>
+            <button class="btn btn-success" onclick="fun2()">Pyramid</button>
+        </div>
+        <div class="col-xxl-8  col2">
+            <p id="para1"></p>
+        
+
+        </div>
+      </div>
+    </div>
+    <style>
+        .cont{
+            margin-top: 10px;
+            border: solid;
+            width: 900px;
+            height: 500px;
+        }
+        .col1{
+            margin-left: 10px;
+            margin-top: 10px;
+           
+            border: solid;
+            width: 300px;
+            height: 480px; 
+        }
+        .col2{
+            background-color: black;
+            margin-left: 10px;
+            margin-top: 10px;
+           
+            border: solid;
+            width: 555px;
+            height: 480px; 
+        }
+    </style>
+    <script src="./js/three.js"></script>
+    <script>
+        function fun() {
+         
+const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,100);
+  const renderer=new THREE.WebGLRenderer();
+  renderer.setSize(548,475);
+//  document.body.appendChild(renderer.domElement);
+
+document.getElementById('para1').appendChild(renderer.domElement);
+
+  const geometry=new THREE.BoxGeometry(1,1,1);
+  const material=new THREE.MeshBasicMaterial({color:0x000ff00,wireframe:true});
+  const cube=new THREE.Mesh(geometry,material);
+  scene.add(cube);
+  const axeshelper=new THREE.AxesHelper(5);
+  scene.add(axeshelper);
+  //const controls = new OrbitControls( camera, renderer.domElement );
+  camera.position.z=5;
+ // controls.update();
+  function animate() {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+                //controls.update();
+				renderer.render( scene, camera );
+                
+			};
+
+			animate();
+      //  document.getElementById('para1').innerHTML=`<h1>Hello</h1>`;
+        }
+        function fun2() {
+         
+         const scene=new THREE.Scene();
+           const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,100);
+           const renderer=new THREE.WebGLRenderer();
+           renderer.setSize(548,475);
+          // document.body.appendChild(renderer.domElement);
+          document.getElementById('para1').appendChild(renderer.domElement)
+         
+           const geometry=new THREE.ConeGeometry( 1, 5, 10 );
+           const material=new THREE.MeshBasicMaterial({color:0x000ff00 ,wireframe:true});
+           const cube=new THREE.Mesh(geometry,material);
+           scene.add(cube);
+           const axeshelper=new THREE.AxesHelper(5);
+           scene.add(axeshelper);
+           //const controls = new OrbitControls( camera, renderer.domElement );
+           camera.position.z=5;
+          // controls.update();
+           function animate() {
+                         requestAnimationFrame( animate );
+         
+                         cube.rotation.x += 0.01;
+                         cube.rotation.y += 0.01;
+                         //controls.update();
+                         renderer.render( scene, camera );
+                         
+                     };
+         
+                     animate();}
+    </script>
+</body>
+</html>

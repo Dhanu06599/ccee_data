@@ -1,0 +1,108 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
+<script>
+    function displayCube(){
+       document.getElementById("cone").style.display="none";
+       document.getElementById("sph").style.display="none";
+       document.getElementById("cube").style.display="block";
+       document.getElementById("cyl").style.display="none";
+    }
+
+
+    function displaySphere(){
+        document.getElementById("cone").style.display="none";
+        document.getElementById("sph").style.display="block";
+        document.getElementById("cube").style.display="none";
+        document.getElementById("cyl").style.display="none";
+    }
+
+    function displayPyramid(){
+        document.getElementById("cone").style.display="block";
+        document.getElementById("sph").style.display="none";
+        document.getElementById("cube").style.display="none";
+        document.getElementById("cyl").style.display="none";
+    }
+
+    function displayCylinder(){
+        document.getElementById("cyl").style.display="block";
+        document.getElementById("cone").style.display="none";
+        document.getElementById("sph").style.display="none";
+        document.getElementById("cube").style.display="none";
+        
+
+    }
+</script>
+ 
+    <div  class="fullpage" style="width: 100%; height: 100% ;">
+
+        <div class="coloumn" style="width: 20%;text-align: center;">
+
+            <div style="margin: 5px; text-align:3px;">
+                <button onclick="displayCube()">Cube</button>
+            </div>
+
+            <div style="margin: 5px; text-align:3px;">
+                <button onclick="displaySphere()">Sphere</button>
+            </div>
+
+            <div style="margin: 5px; text-align:3px;">
+                <button onclick="displayPyramid()">Pyramid</button>
+            </div>
+
+            <div style="margin: 5px; text-align: 3px;">
+            <button onclick="displayCylinder()">Cylinder</button>
+            </div>
+
+        </div>
+            
+            <div >
+                <script type="module" src="./js/Sphere.js"></script>
+                <script type="module" src="./js/Pyramid.js"></script>
+                <script type="module" src="./js/Cube.js"></script> 
+                <script type="module" src="./js/Cylinder.js"></script>
+
+            </div>
+
+        <div class="coloumn" style="width: 70% ;">
+
+            <div id="cube">
+                <div class="fullpage" id="MyCanvas"></div>
+            
+            </div>
+
+            <div id="cone">
+                <div class="fullpage" id="pyramid"></div>
+            
+            </div>
+            
+            <div id="sph">
+            
+                <div class="fullpage" id="sphere"></div>
+
+            </div>
+            <div id="cyl">
+                <div class="fullpage" id="cylinder"></div>
+            </div>
+        </div>
+</div>
+  
+</body>
+</html> -->
